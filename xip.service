@@ -1,0 +1,13 @@
+[Unit]
+Description=xip
+
+[Service]
+Type=simple
+User=root
+Group=root
+EnvironmentFile=-/etc/xipconfig/xip
+ExecStart=/usr/bin/xip.linux  $OPTIONS
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
